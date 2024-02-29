@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.application.utility.sqlLog.SqlLogDAO">
+
+
+	<select id="getBrandList" resultType="hashmap">
+		SELECT
+				*
+		FROM
+				BRAND
+	</select>
+	
+	<select id="getBrandDetail" parameterType="long" resultType="hashmap">
+		SELECT
+				*
+		FROM
+				BRAND
+		WHERE
+				BRAND_ID = #{brandId}
+	</select>
+
+	
+	<insert id="createBrand"  parameterType="hashmap" >
+		INSERT INTO 
+				BRAND
+		VALUES (
+			#{brandId},
+			#{brandNm},
+			NOW(),
+			#{activeYn}
+		);
+	</insert>
+	
+	<update id="updateBrand"  parameterType="hashmap" >
+		UPDATE
+				BRAND
+		SET
+				BRAND_NM = #{brandNm}
+		WHERE
+				BRAND_ID = #{brandId}
+	</update>
+	
+	<delete id="deleteBrand" parameterType="long">
+		DELETE FROM 
+				BRAND
+		WHERE
+				BRAND_ID = #{brandId}
+	</delete>
+	
+</mapper> 
