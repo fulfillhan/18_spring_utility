@@ -1,0 +1,812 @@
+2024-02-29 15:55:43.563 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - INSERT INTO BOARD(
+	WRITER,
+	SUBJECT,
+	PASSWD,
+	CONTENT
+)
+VALUES (
+	'1',
+	'1',
+	'$2a$10$x3qJGoaLb4IQzuZLLDZPeeFKhD/khAG/G4/HkzbXSB21E51Wj8e8a',
+	'1'
+)
+
+2024-02-29 15:55:44.749 [http-nio-8080-exec-3] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+
+2024-02-29 15:55:44.774 [http-nio-8080-exec-3] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100006   |$2a$10$sG6UJMswOJXU0yjj4lGdo.jGiZuPbEOtlQ95oTypxXX2JV3nUvamq |랑히     |안녕      |안녕      |35       |2024-02-16 16:37:17.0 |
+|100007   |$2a$10$tcdrE8jY5uuo6e5lr8wmZe0aQZBOfQgOYEDQj69IjHj8AuGv4Y1/. |랑히     |안녕      |12      |34       |2024-02-16 17:08:30.0 |
+|100009   |$2a$10$7rG85OB7x6rqByoZwvdXFut9jdfgcNixNh90eVAVexh3cdR75mucG |1      |2       |3       |6        |2024-02-19 15:11:20.0 |
+|100010   |$2a$10$vMRIP3ua2fijhJo5waNXXOsmdy3.iaQSxu5bhYcDv9SqbhR7Qhs.2 |제니     |제니      |1       |59       |2024-02-19 15:12:28.0 |
+|100011   |$2a$10$rShKbjydXgIbwAcQ7.x4teEk.8I0fbKEyKYbpABSqExBvAmfOiSnS |랑히     |안녕      |1       |0        |2024-02-19 16:09:26.0 |
+|100012   |$2a$10$2.xF3HPYd0/OJ47gYe7/deNtrp1BlstnI03OiygURONlnZMDKjK1C |1      |1       |1안녕     |43       |2024-02-28 16:34:47.0 |
+|100013   |$2a$10$.1HiEXkkPq93vEjGm2prneVkB3DhGfZ5KkZnh2sPt.GF9uKz9.mfu |2      |2       |2안녕     |3        |2024-02-28 16:50:40.0 |
+|100014   |$2a$10$kKBn75cIY2lz6PXuP7f6xO3GJvqOVchfTDFb104rLup9SLTmpXwgu |3      |3       |3       |0        |2024-02-28 17:03:35.0 |
+|100015   |$2a$10$x3qJGoaLb4IQzuZLLDZPeeFKhD/khAG/G4/HkzbXSB21E51Wj8e8a |1      |1       |1       |0        |2024-02-29 15:55:43.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 15:55:46.096 [http-nio-8080-exec-4] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100015
+
+2024-02-29 15:55:46.108 [http-nio-8080-exec-4] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100015
+
+2024-02-29 15:55:46.118 [http-nio-8080-exec-4] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100015   |$2a$10$x3qJGoaLb4IQzuZLLDZPeeFKhD/khAG/G4/HkzbXSB21E51Wj8e8a |1      |1       |1       |1        |2024-02-29 15:55:43.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 15:55:47.600 [http-nio-8080-exec-5] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100015
+
+2024-02-29 15:55:47.606 [http-nio-8080-exec-5] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100015
+
+2024-02-29 15:55:47.608 [http-nio-8080-exec-5] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100015   |$2a$10$x3qJGoaLb4IQzuZLLDZPeeFKhD/khAG/G4/HkzbXSB21E51Wj8e8a |1      |1       |1       |2        |2024-02-29 15:55:43.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 15:55:50.329 [http-nio-8080-exec-6] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100015
+
+2024-02-29 15:55:50.333 [http-nio-8080-exec-6] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$x3qJGoaLb4IQzuZLLDZPeeFKhD/khAG/G4/HkzbXSB21E51Wj8e8a |
+|-------------------------------------------------------------|
+
+2024-02-29 15:55:50.406 [http-nio-8080-exec-6] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100015
+
+2024-02-29 15:55:50.408 [http-nio-8080-exec-6] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$x3qJGoaLb4IQzuZLLDZPeeFKhD/khAG/G4/HkzbXSB21E51Wj8e8a |
+|-------------------------------------------------------------|
+
+2024-02-29 16:59:28.168 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - INSERT INTO BOARD(
+	WRITER,
+	SUBJECT,
+	PASSWD,
+	CONTENT
+)
+VALUES (
+	'5',
+	'5',
+	'$2a$10$2QYfgBD6ZXrvyqKqdDmhsOzx24KBsOk5dj82/Oor3DYacn7vOJkyq',
+	'5'
+)
+
+2024-02-29 16:59:29.343 [http-nio-8080-exec-3] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+
+2024-02-29 16:59:29.368 [http-nio-8080-exec-3] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100006   |$2a$10$sG6UJMswOJXU0yjj4lGdo.jGiZuPbEOtlQ95oTypxXX2JV3nUvamq |랑히     |안녕      |안녕      |35       |2024-02-16 16:37:17.0 |
+|100007   |$2a$10$tcdrE8jY5uuo6e5lr8wmZe0aQZBOfQgOYEDQj69IjHj8AuGv4Y1/. |랑히     |안녕      |12      |34       |2024-02-16 17:08:30.0 |
+|100009   |$2a$10$7rG85OB7x6rqByoZwvdXFut9jdfgcNixNh90eVAVexh3cdR75mucG |1      |2       |3       |6        |2024-02-19 15:11:20.0 |
+|100010   |$2a$10$vMRIP3ua2fijhJo5waNXXOsmdy3.iaQSxu5bhYcDv9SqbhR7Qhs.2 |제니     |제니      |1       |59       |2024-02-19 15:12:28.0 |
+|100011   |$2a$10$rShKbjydXgIbwAcQ7.x4teEk.8I0fbKEyKYbpABSqExBvAmfOiSnS |랑히     |안녕      |1       |0        |2024-02-19 16:09:26.0 |
+|100012   |$2a$10$2.xF3HPYd0/OJ47gYe7/deNtrp1BlstnI03OiygURONlnZMDKjK1C |1      |1       |1안녕     |43       |2024-02-28 16:34:47.0 |
+|100013   |$2a$10$.1HiEXkkPq93vEjGm2prneVkB3DhGfZ5KkZnh2sPt.GF9uKz9.mfu |2      |2       |2안녕     |3        |2024-02-28 16:50:40.0 |
+|100014   |$2a$10$kKBn75cIY2lz6PXuP7f6xO3GJvqOVchfTDFb104rLup9SLTmpXwgu |3      |3       |3       |0        |2024-02-28 17:03:35.0 |
+|100015   |$2a$10$x3qJGoaLb4IQzuZLLDZPeeFKhD/khAG/G4/HkzbXSB21E51Wj8e8a |1      |1       |1       |2        |2024-02-29 15:55:43.0 |
+|100016   |$2a$10$2QYfgBD6ZXrvyqKqdDmhsOzx24KBsOk5dj82/Oor3DYacn7vOJkyq |5      |5       |5       |0        |2024-02-29 16:59:28.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 16:59:30.583 [http-nio-8080-exec-4] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100016
+
+2024-02-29 16:59:30.590 [http-nio-8080-exec-4] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100016
+
+2024-02-29 16:59:30.591 [http-nio-8080-exec-4] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100016   |$2a$10$2QYfgBD6ZXrvyqKqdDmhsOzx24KBsOk5dj82/Oor3DYacn7vOJkyq |5      |5       |5       |1        |2024-02-29 16:59:28.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 16:59:31.897 [http-nio-8080-exec-5] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100016
+
+2024-02-29 16:59:31.903 [http-nio-8080-exec-5] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100016
+
+2024-02-29 16:59:31.905 [http-nio-8080-exec-5] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100016   |$2a$10$2QYfgBD6ZXrvyqKqdDmhsOzx24KBsOk5dj82/Oor3DYacn7vOJkyq |5      |5       |5       |2        |2024-02-29 16:59:28.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 16:59:33.907 [http-nio-8080-exec-6] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100016
+
+2024-02-29 16:59:33.911 [http-nio-8080-exec-6] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$2QYfgBD6ZXrvyqKqdDmhsOzx24KBsOk5dj82/Oor3DYacn7vOJkyq |
+|-------------------------------------------------------------|
+
+2024-02-29 16:59:33.989 [http-nio-8080-exec-6] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100016
+
+2024-02-29 16:59:33.991 [http-nio-8080-exec-6] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$2QYfgBD6ZXrvyqKqdDmhsOzx24KBsOk5dj82/Oor3DYacn7vOJkyq |
+|-------------------------------------------------------------|
+
+2024-02-29 17:36:24.151 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - INSERT INTO BOARD(
+	WRITER,
+	SUBJECT,
+	PASSWD,
+	CONTENT
+)
+VALUES (
+	'7',
+	'7',
+	'$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy',
+	'7'
+)
+
+2024-02-29 17:36:25.162 [http-nio-8080-exec-3] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+
+2024-02-29 17:36:25.182 [http-nio-8080-exec-3] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100006   |$2a$10$sG6UJMswOJXU0yjj4lGdo.jGiZuPbEOtlQ95oTypxXX2JV3nUvamq |랑히     |안녕      |안녕      |35       |2024-02-16 16:37:17.0 |
+|100007   |$2a$10$tcdrE8jY5uuo6e5lr8wmZe0aQZBOfQgOYEDQj69IjHj8AuGv4Y1/. |랑히     |안녕      |12      |34       |2024-02-16 17:08:30.0 |
+|100009   |$2a$10$7rG85OB7x6rqByoZwvdXFut9jdfgcNixNh90eVAVexh3cdR75mucG |1      |2       |3       |6        |2024-02-19 15:11:20.0 |
+|100010   |$2a$10$vMRIP3ua2fijhJo5waNXXOsmdy3.iaQSxu5bhYcDv9SqbhR7Qhs.2 |제니     |제니      |1       |59       |2024-02-19 15:12:28.0 |
+|100011   |$2a$10$rShKbjydXgIbwAcQ7.x4teEk.8I0fbKEyKYbpABSqExBvAmfOiSnS |랑히     |안녕      |1       |0        |2024-02-19 16:09:26.0 |
+|100012   |$2a$10$2.xF3HPYd0/OJ47gYe7/deNtrp1BlstnI03OiygURONlnZMDKjK1C |1      |1       |1안녕     |43       |2024-02-28 16:34:47.0 |
+|100013   |$2a$10$.1HiEXkkPq93vEjGm2prneVkB3DhGfZ5KkZnh2sPt.GF9uKz9.mfu |2      |2       |2안녕     |3        |2024-02-28 16:50:40.0 |
+|100014   |$2a$10$kKBn75cIY2lz6PXuP7f6xO3GJvqOVchfTDFb104rLup9SLTmpXwgu |3      |3       |3       |0        |2024-02-28 17:03:35.0 |
+|100015   |$2a$10$x3qJGoaLb4IQzuZLLDZPeeFKhD/khAG/G4/HkzbXSB21E51Wj8e8a |1      |1       |1       |2        |2024-02-29 15:55:43.0 |
+|100016   |$2a$10$2QYfgBD6ZXrvyqKqdDmhsOzx24KBsOk5dj82/Oor3DYacn7vOJkyq |5      |5       |5       |2        |2024-02-29 16:59:28.0 |
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |0        |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:36:26.639 [http-nio-8080-exec-4] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:36:26.646 [http-nio-8080-exec-4] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:26.648 [http-nio-8080-exec-4] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |1        |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:36:27.689 [http-nio-8080-exec-5] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:36:27.694 [http-nio-8080-exec-5] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:27.696 [http-nio-8080-exec-5] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |2        |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:36:28.953 [http-nio-8080-exec-6] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:28.957 [http-nio-8080-exec-6] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:36:29.032 [http-nio-8080-exec-6] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:29.034 [http-nio-8080-exec-6] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:36:30.095 [http-nio-8080-exec-7] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:36:30.099 [http-nio-8080-exec-7] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:30.100 [http-nio-8080-exec-7] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |3        |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:36:31.798 [http-nio-8080-exec-8] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:36:31.802 [http-nio-8080-exec-8] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:31.804 [http-nio-8080-exec-8] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |4        |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:36:32.334 [http-nio-8080-exec-9] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:36:32.339 [http-nio-8080-exec-9] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:32.343 [http-nio-8080-exec-9] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |5        |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:36:32.911 [http-nio-8080-exec-10] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:36:32.915 [http-nio-8080-exec-10] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:32.917 [http-nio-8080-exec-10] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |6        |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:36:33.109 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:36:33.114 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:33.115 [http-nio-8080-exec-1] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |7        |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:36:34.046 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:36:34.050 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:34.051 [http-nio-8080-exec-2] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |8        |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:36:35.593 [http-nio-8080-exec-3] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:35.595 [http-nio-8080-exec-3] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:36:35.670 [http-nio-8080-exec-3] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:36:35.671 [http-nio-8080-exec-3] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:39:37.255 [http-nio-8080-exec-6] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:39:37.257 [http-nio-8080-exec-6] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:39:37.331 [http-nio-8080-exec-6] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:39:37.332 [http-nio-8080-exec-6] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:39:38.278 [http-nio-8080-exec-7] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:39:38.285 [http-nio-8080-exec-7] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:39:38.287 [http-nio-8080-exec-7] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |9        |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:39:42.024 [http-nio-8080-exec-8] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:39:42.025 [http-nio-8080-exec-8] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:39:42.099 [http-nio-8080-exec-8] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:39:42.100 [http-nio-8080-exec-8] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:40:32.421 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:40:32.426 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:40:32.428 [http-nio-8080-exec-1] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |10       |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:40:33.085 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:40:33.088 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:40:33.089 [http-nio-8080-exec-2] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |11       |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:40:42.831 [http-nio-8080-exec-3] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:40:42.833 [http-nio-8080-exec-3] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:40:42.906 [http-nio-8080-exec-3] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:40:42.907 [http-nio-8080-exec-3] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:41:39.468 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:41:39.474 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:41:39.475 [http-nio-8080-exec-1] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |12       |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:41:39.982 [http-nio-8080-exec-5] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:41:39.987 [http-nio-8080-exec-5] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:41:39.988 [http-nio-8080-exec-5] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |13       |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:41:42.512 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:41:42.514 [http-nio-8080-exec-2] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:41:42.588 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:41:42.589 [http-nio-8080-exec-2] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:42:28.025 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:42:28.032 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:42:28.034 [http-nio-8080-exec-2] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |14       |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:42:28.757 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:42:28.763 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:42:28.765 [http-nio-8080-exec-1] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |15       |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:42:31.191 [http-nio-8080-exec-3] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:42:31.193 [http-nio-8080-exec-3] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:42:31.267 [http-nio-8080-exec-3] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:42:31.268 [http-nio-8080-exec-3] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:43:55.392 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:43:55.397 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:43:55.399 [http-nio-8080-exec-1] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |16       |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:43:56.760 [http-nio-8080-exec-4] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:43:56.761 [http-nio-8080-exec-4] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:43:56.836 [http-nio-8080-exec-4] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:43:56.837 [http-nio-8080-exec-4] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:43:58.151 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:43:58.159 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:43:58.161 [http-nio-8080-exec-2] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |17       |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:47:01.274 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - UPDATE BOARD
+SET READ_CNT=READ_CNT+1
+WHERE BOARD_ID=100017
+
+2024-02-29 17:47:01.279 [http-nio-8080-exec-2] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:47:01.280 [http-nio-8080-exec-2] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100017   |$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |7      |7       |7       |18       |2024-02-29 17:36:24.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+
+2024-02-29 17:47:08.600 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:47:08.601 [http-nio-8080-exec-1] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:47:08.675 [http-nio-8080-exec-1] INFO 
+				jdbc.sqlonly - SELECT PASSWD
+FROM BOARD
+WHERE BOARD_ID = 100017
+
+2024-02-29 17:47:08.676 [http-nio-8080-exec-1] INFO 
+				jdbc.resultsettable - 
+|-------------------------------------------------------------|
+|passwd                                                       |
+|-------------------------------------------------------------|
+|$2a$10$524wJ7PdJTsAm2uX3LU4UOGNix1KcEZY7Ox9rR16DjJQFm5FUBpBy |
+|-------------------------------------------------------------|
+
+2024-02-29 17:48:00.486 [http-nio-8080-exec-4] INFO 
+				jdbc.sqlonly - DELETE FROM BOARD
+WHERE BOARD_ID=100017
+
+2024-02-29 17:48:01.431 [http-nio-8080-exec-8] INFO 
+				jdbc.sqlonly - SELECT *
+FROM BOARD
+
+2024-02-29 17:48:01.434 [http-nio-8080-exec-8] INFO 
+				jdbc.resultsettable - 
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|board_id |passwd                                                       |writer |subject |content |read_cnt |enroll_at             |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+|100006   |$2a$10$sG6UJMswOJXU0yjj4lGdo.jGiZuPbEOtlQ95oTypxXX2JV3nUvamq |랑히     |안녕      |안녕      |35       |2024-02-16 16:37:17.0 |
+|100007   |$2a$10$tcdrE8jY5uuo6e5lr8wmZe0aQZBOfQgOYEDQj69IjHj8AuGv4Y1/. |랑히     |안녕      |12      |34       |2024-02-16 17:08:30.0 |
+|100009   |$2a$10$7rG85OB7x6rqByoZwvdXFut9jdfgcNixNh90eVAVexh3cdR75mucG |1      |2       |3       |6        |2024-02-19 15:11:20.0 |
+|100010   |$2a$10$vMRIP3ua2fijhJo5waNXXOsmdy3.iaQSxu5bhYcDv9SqbhR7Qhs.2 |제니     |제니      |1       |59       |2024-02-19 15:12:28.0 |
+|100011   |$2a$10$rShKbjydXgIbwAcQ7.x4teEk.8I0fbKEyKYbpABSqExBvAmfOiSnS |랑히     |안녕      |1       |0        |2024-02-19 16:09:26.0 |
+|100012   |$2a$10$2.xF3HPYd0/OJ47gYe7/deNtrp1BlstnI03OiygURONlnZMDKjK1C |1      |1       |1안녕     |43       |2024-02-28 16:34:47.0 |
+|100013   |$2a$10$.1HiEXkkPq93vEjGm2prneVkB3DhGfZ5KkZnh2sPt.GF9uKz9.mfu |2      |2       |2안녕     |3        |2024-02-28 16:50:40.0 |
+|100014   |$2a$10$kKBn75cIY2lz6PXuP7f6xO3GJvqOVchfTDFb104rLup9SLTmpXwgu |3      |3       |3       |0        |2024-02-28 17:03:35.0 |
+|100015   |$2a$10$x3qJGoaLb4IQzuZLLDZPeeFKhD/khAG/G4/HkzbXSB21E51Wj8e8a |1      |1       |1       |2        |2024-02-29 15:55:43.0 |
+|100016   |$2a$10$2QYfgBD6ZXrvyqKqdDmhsOzx24KBsOk5dj82/Oor3DYacn7vOJkyq |5      |5       |5       |2        |2024-02-29 16:59:28.0 |
+|---------|-------------------------------------------------------------|-------|--------|--------|---------|----------------------|
+

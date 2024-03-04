@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.application.utility.transaction.TransactionDAO">
+
+	<update id="transfer">
+		UPDATE
+				ACCOUNT
+		SET
+				BALANCE = BALANCE - 10000
+		WHERE
+				ACCOUNT_ID = '111'
+	</update>
+
+	<update id="deposit">
+		UPDATE
+				ACCOUNT
+		SET
+				BALANCE = BALANCE + 10000
+		WHERE
+				ACCOUNT_ID = '222'
+	</update>
+
+
+
+	<update id="increasePoints">
+		UPDATE
+				MEMBER
+		SET
+				POINT = POINT + 100
+		WHERE
+				MEMBER_ID = 'user1'
+	</update>
+	
+	<update id="decreaseCartQty">
+		UPDATE
+				CART
+		SET
+				CART_CNT = CART_CNT - 1
+		WHERE 
+				MEMBER_ID = 'user1'
+	</update>
+	
+	<update id="increaseOrerQty">
+	
+		UPDATE   
+				`ORDER`
+		SET
+				ORDER_CNT = ORDER_CNT + 1
+		WHERE 
+				MEMBER_ID = 'user1'
+		
+	</update>
+	
+</mapper> 
