@@ -9,6 +9,8 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 //스케쥴링,트랜잭션,export
 //기본패키지에 @EnableScheduling추가
+
+
 @Service
 public class ScedulerService {
 	
